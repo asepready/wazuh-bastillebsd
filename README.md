@@ -68,8 +68,8 @@ bastille create wazuh 14.1-RELEASE 10.0.0.1
 Now apply wazuh template to container
 
 ```sh
-bastille bootstrap https://github.com/alonsobsd/wazuh-bastillebsd
-bastille template wazuh alonsobsd/wazuh-bastillebsd
+bastille bootstrap https://github.com/asepready/wazuh-bastillebsd
+bastille template wazuh asepready/wazuh-bastillebsd
 ```
 if you want to apply template using another private IP address, you can do the following
 
