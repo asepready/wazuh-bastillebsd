@@ -64,6 +64,10 @@ Create a container named wazuh with a private IP address 10.0.0.1
 
 ```sh
 bastille create wazuh 14.1-RELEASE 10.0.0.1
+bastille rdr wazuh udp 1514 1514
+bastille rdr wazuh tcp 1515 1515
+bastille rdr wazuh tcp 5601 5601
+bastille rdr wazuh tcp 55000 55000
 ```
 Now apply wazuh template to container
 
