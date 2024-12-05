@@ -64,6 +64,11 @@ Create a container named wazuh with a private IP address 10.0.0.1
 
 ```sh
 bastille create wazuh 14.1-RELEASE 10.0.0.1
+bastille sysrc www sshd_enable=YES
+bastille service www sshd start
+# Redirect Port Conatiner to Host
+#CMD RDR Container Protocol HostPort ContainerPort
+bastille rdr wazuh tcp 2200 22
 bastille rdr wazuh udp 1514 1514
 bastille rdr wazuh tcp 1515 1515
 bastille rdr wazuh tcp 5601 5601
